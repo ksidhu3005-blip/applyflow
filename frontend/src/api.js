@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:8000",
+  baseURL: "https://applyflow-nign.onrender.com",
 });
 
 export const listApplications = (status = null, sortBy = "date_applied") =>
