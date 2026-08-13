@@ -10,9 +10,9 @@ Base.metadata.create_all(bind=engine)
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_origins=["https://applyflow-pi.vercel.app/"],
+    allow_methods=["https://applyflow-pi.vercel.app/"],
+    allow_headers=["https://applyflow-pi.vercel.app/"],
 )
 
 app.include_router(applications.router)

@@ -12,7 +12,7 @@ A private job application tracker — built to replace a messy spreadsheet with 
 
 
 
-\---
+![ApplyFlow dashboard](dashboard.png)
 
 
 
