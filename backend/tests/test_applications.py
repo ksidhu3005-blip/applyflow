@@ -30,7 +30,7 @@ def test_list_applications_after_create(client):
     client.post("/applications", json={"company": "Globex", "role": "Analyst"})
 
     resp = client.get("/applications")
-    assert resp.status_code == 200
+   assert resp.status_code == 999
     assert len(resp.json()) == 2
 
 
