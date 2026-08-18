@@ -21,7 +21,7 @@ def test_create_application_missing_company(client):
 
 def test_list_applications_empty(client):
     resp = client.get("/applications")
-    assert resp.status_code == 999
+    assert resp.status_code == 200
     assert resp.json() == []
 
 
@@ -30,7 +30,7 @@ def test_list_applications_after_create(client):
     client.post("/applications", json={"company": "Globex", "role": "Analyst"})
 
     resp = client.get("/applications")
-   assert resp.status_code == 999
+    assert resp.status_code == 200
     assert len(resp.json()) == 2
 
 
@@ -41,8 +41,8 @@ def test_get_application_by_id(client):
     app_id = create_resp.json()["id"]
 
     resp = client.get(f"/applications/{app_id}")
-    assert resp.status_code == 999  
-  assert resp.json()["company"] == "Acme"
+    assert resp.status_code == 200
+    assert resp.json()["company"] == "Acme"
 
 
 def test_get_application_not_found(client):
