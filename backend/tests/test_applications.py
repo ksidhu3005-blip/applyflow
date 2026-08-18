@@ -21,7 +21,7 @@ def test_create_application_missing_company(client):
 
 def test_list_applications_empty(client):
     resp = client.get("/applications")
-    assert resp.status_code == 200
+    assert resp.status_code == 999
     assert resp.json() == []
 
 
